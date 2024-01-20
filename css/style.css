@@ -3217,7 +3217,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #78d5ef; }
+  background-color: #fac564; }
 
 .nav-fill .nav-item {
   -webkit-box-flex: 1;
@@ -8161,16 +8161,25 @@ textarea.form-control {
         margin-bottom: 10px;
         width: 100% !important; } }
     .ftco-tab-nav li a {
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: .2em;
-      color: #ccc;
-      border: 2px solid #ccc;
-      border-radius: 0 !important; }
+        border-radius: 0;
+        margin-bottom: 0;
+        color: #fac564;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block;
+        bordeR: 1px solid #fac564;
+        margin-left: 5px;
+        margin-right: 5px;
+    
+     }
+
       .ftco-tab-nav li a.active {
-        background: none !important;
-        color: black !important;
-        border: 2px solid #000; }
+
+        transition: all 0.3s ease;
+        background: #fac564;
+        border: 1px solid transparent;
+       }
 
 .ftco-animate {
   opacity: 0;
@@ -8988,10 +8997,10 @@ textarea.form-control {
 
 /* logo Styling*/
 .logo-image {
-  height: 130px;
-  margin-left: 10%; /* Use percentage for responsive margin */
-  margin-bottom: -15%; /* Use percentage for responsive margin */
-  margin-top: -5%; /* Use percentage for responsive margin */
+  height: 185px;
+  margin-left: 10%;
+  margin-bottom: -31.5%;
+  margin-top: -5%;
 }
 
 /* Media query for smaller screens */
