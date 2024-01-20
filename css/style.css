@@ -8160,26 +8160,18 @@ textarea.form-control {
         display: block !important;
         margin-bottom: 10px;
         width: 100% !important; } }
-    .ftco-tab-nav li a {
-        border-radius: 0;
-        margin-bottom: 0;
-        color: #fac564;
-        font-size: 18px;
-        font-weight: 400;
-        position: relative;
-        display: inline-block;
-        bordeR: 1px solid #fac564;
-        margin-left: 5px;
-        margin-right: 5px;
     
-     }
-
+    .ftco-tab-nav li a {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: .2em;
+      color: #ccc;
+      border: 2px solid #ccc;
+      border-radius: 0 !important; }
       .ftco-tab-nav li a.active {
-
-        transition: all 0.3s ease;
-        background: #fac564;
-        border: 1px solid transparent;
-       }
+        background: none !important;
+        color: black !important;
+        border: 2px solid #000; }
 
 .ftco-animate {
   opacity: 0;
