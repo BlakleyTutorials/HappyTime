@@ -3,7 +3,7 @@
     <head>
         <title>Happy Time Tvedestrand</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
@@ -27,10 +27,23 @@
         <!-- Site Navigation & Name -->
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
+                <!-- Title -->
                 <a class="navbar-brand" href="index.html">
                     <span class="flaticon-pizza-1 mr-2"></span>HAPPY TIME<br />
                     <small>&nbsp;&nbsp; Tvedestrand</small>
 				</a>
+                
+                <!-- Quick menu selection  -->
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#pills-american-pizza" class="nav-link" onclick="quick_menu('pills-american-pizza')">Amerikansk Pizza</a></li>
+                        <li class="nav-item"><a href="#pills-italian-pizza"  class="nav-link" onclick="quick_menu('pills-italian-pizza')">Italiensk Pizza</a></li>
+                        <li class="nav-item"><a href="#pills-kebabs"         class="nav-link" onclick="quick_menu('pills-kebabs')">Kebab</a></li>
+                        <li class="nav-item"><a href="#pills-burgers"        class="nav-link" onclick="quick_menu('pills-burgers')">Hamburger</a></li>
+                        <li class="nav-item"><a href="#pills-specials"       class="nav-link" onclick="quick_menu('pills-specials')">Tilbehør</a></li>
+                        <li class="nav-item"><a href="#pills-drinks"         class="nav-link" onclick="quick_menu('pills-drinks')">Drikke</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         
@@ -166,7 +179,6 @@
             <div class="one-half img" style="background-image: url(images/location_a.jpg);"></div>
             <div class="one-half ftco-animate">
                 <div class="heading-section ftco-animate">
-                    <!-- VELKOMMEN TIL HAPPY TIME TVEDESTRAND -->
                     <h2 class="mb-4">VELKOMMEN TIL <span class="flaticon-pizza">HAPPY TIME</span> TVEDESTRAND</h2>
                 </div>
                 <div>
@@ -244,7 +256,6 @@
                         <li class="nav-item ftco-animate">
                             <a class="nav-link" id="pills-drinks-tab" data-toggle="pill" href="#pills-drinks" role="tab" aria-controls="pills-drinks" aria-selected="false">Drikke</a>
                         </li>
-
                     </ul>
     
                     <!-- menu content -->
@@ -841,5 +852,32 @@
         <script src="js/google-map.js"></script>
         <script src="js/main.js"></script>
 
+        <!-- quick menu top-navigation selection script -->
+        <script>
+            function quick_menu(item_name) {
+                let _tabs = document.getElementsByClassName("tab-pane fade");
+                
+                // reset currently active tab & set one from item name
+                for (let i = 0; i < _tabs.length; i++)
+                    _tabs[i].className = "tab-pane fade";
+                
+                for (let i = 0; i < _tabs.length; i++) {
+                    if (_tabs[i].id == item_name)
+                        _tabs[i].className = "tab-pane fade show active";
+                }
+
+                // reset currently active button & set one based off item name
+                let _links = document.getElementsByClassName("nav-link");
+                _links = Array.from(_links).slice(6);
+
+                for (let i = 0; i < _links.length; i++)
+                    _links[i].className = "nav-link";
+                
+                for (let i = 0; i < _links.length; i++) {
+                    if (_links[i].id.split("-tab")[0] == item_name)
+                        _links[i].className = "nav-link active show";
+                }
+            }
+        </script>
     </body>
 </html>
