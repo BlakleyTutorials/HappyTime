@@ -7340,7 +7340,7 @@ h1, h2, h3, h4, h5,
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        padding-left: 20px;
+        /* padding-left: 20px; */
         padding-right: 20px;
         color: rgba(255, 255, 255, 0.7); } }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
