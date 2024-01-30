@@ -9049,8 +9049,7 @@ textarea.form-control {
 * {
   touch-action: pan-y !important;
 }
-
-
+/*  */
 table {
   border-collapse: separate;
   background:#fff;
